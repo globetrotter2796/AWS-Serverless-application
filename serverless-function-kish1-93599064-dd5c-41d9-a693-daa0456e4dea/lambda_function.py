@@ -260,9 +260,9 @@ def buildresponse(statusCode, body):
     return response
 
 #------------------------------------------------------------        
+#The json package can encode python objects as strings with the json JSONEncoder class,
+#The json package candecodes strings into python objects using the json.JSONDecoder class.
 
-
-  
 class CustomEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, Decimal):
